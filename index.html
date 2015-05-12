@@ -9,14 +9,14 @@
     <script>
       MP.api.ready(function() {
     var eventName = 'General_New_Session';
-    var $mau = MP.api.segment(eventName, 'mp_country_code', {
+    var $mau = MP.api.segment(eventName, 'Country', {
         from: moment().subtract(10, 'months'),
         to: moment(),
         type: 'unique',
         unit: 'month'
     });
 
-    var $dau = MP.api.segment(eventName, 'mp_country_code', {
+    var $dau = MP.api.segment(eventName, 'Country', {
         from: moment().subtract(10, 'days'),
         to: moment(),
         type: 'unique',
